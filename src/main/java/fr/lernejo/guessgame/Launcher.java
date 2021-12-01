@@ -21,7 +21,6 @@ public class Launcher {
         }
 
         else if (args[0].compareTo("-auto") == 0){
-            System.out.println("computergame");
             ComputerPlayer computerP = new ComputerPlayer();
             Simulation simulation = new Simulation(computerP);
             simulation.initialize(Integer.valueOf(args[1]));

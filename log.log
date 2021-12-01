@@ -1,0 +1,11 @@
+2021-12-01 15:27:11.710 class fr.lernejo.logger.ContextualLogger guessing 50
+2021-12-01 15:27:11.725 class fr.lernejo.logger.ContextualLogger plus petit
+2021-12-01 15:27:11.726 class fr.lernejo.logger.ContextualLogger guessing 25
+2021-12-01 15:27:11.726 class fr.lernejo.logger.ContextualLogger plus grand
+2021-12-01 15:27:11.727 class fr.lernejo.logger.ContextualLogger guessing 37
+2021-12-01 15:27:11.727 class fr.lernejo.logger.ContextualLogger plus petit
+2021-12-01 15:27:11.727 class fr.lernejo.logger.ContextualLogger guessing 31
+2021-12-01 15:27:11.727 class fr.lernejo.logger.ContextualLogger plus grand
+2021-12-01 15:27:11.728 class fr.lernejo.logger.ContextualLogger guessing 34
+2021-12-01 15:27:11.728 class fr.lernejo.logger.ContextualLogger Yes it was indeed 34
+2021-12-01 15:27:11.746 class fr.lernejo.logger.ContextualLogger Found in :00.00.043
