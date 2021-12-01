@@ -4,6 +4,7 @@ import fr.lernejo.logger.Logger;
 import fr.lernejo.logger.LoggerFactory;
 
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Simulation {
     private final Logger logger;
@@ -24,19 +25,34 @@ public class Simulation {
      * @return true if the player have guessed the right number
      */
     private boolean nextRound() {
-        long tmp = 0;
-        tmp = player.askNextGuess();
-        if (tmp == numberToGuess){
-            logger.log("Bonne réponse");
+        long guess = 0;
+        guess = player.askNextGuess();
+        if (guess == numberToGuess){
+            logger.log("Yes it was indeed " + numberToGuess);
             return true;
         }
         else {
-            player.respond(tmp > numberToGuess);
+            player.respond(guess > numberToGuess);
         }
         return false;
     }
 
-    public void loopUntilPlayerSucceed() {
-        while (!this.nextRound());
+    public void loopUntilPlayerSucceed(long maxIter) {
+        long timestart = System.currentTimeMillis();
+        boolean bool = false;
+        while (bool == false) {
+            bool = this.nextRound();
+            maxIter = maxIter -1;
+            //logger.log(String.valueOf(maxIter));
+            if (maxIter<=0){
+                bool = true;
+            }
+        };
+        long timer = System.currentTimeMillis() - timestart;
+        String ms = String.format("%03d", timer%1000);
+        String sec = String.format("%02d", timer/1000 %60);
+        String min = String.format("%02d", timer/1000 /60);
+        String logTimer = min + "." + sec + "." + ms;
+        logger.log("Found in :" + logTimer);
     }
 }
