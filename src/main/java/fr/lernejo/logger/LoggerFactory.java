@@ -1,9 +1,8 @@
 package fr.lernejo.logger;
 
-public class LoggerFactory {
+public abstract class LoggerFactory implements Logger{
 
     public static Logger getLogger(String name){
-        //Logger log = new Logger();
-        return null;//log;
+        return new ConsoleLogger();
     }
 }
