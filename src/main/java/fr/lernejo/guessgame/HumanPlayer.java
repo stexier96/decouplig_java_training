@@ -11,7 +11,7 @@ public class HumanPlayer implements Player {
 
     @Override
     public long askNextGuess() {
-        System.out.println("Devine quel nombre");
+        //System.out.println("Devine quel nombre");
         Scanner sc = new Scanner(System.in);
         return sc.nextLong();
     }
